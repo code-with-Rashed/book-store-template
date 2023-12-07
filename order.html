@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ORDER PAGE</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="shortcut icon" href="image/fav.png" type="image/x-icon" />
+  </head>
+  <!-- Navbar start -->
+  <nav
+    id="nav-bar"
+    class="navbar navbar-expand-lg bg-white navbar-light px-lg-3 py-lg-2 shadow-sm sticky-top"
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand me-5 fs-3 fw-bold h-fonts" href="index.html"
+        >Nibrash Book Store</a
+      >
+      <button
+        class="navbar-toggler shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link me-2" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-2" href="contact.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+
+  <body class="bg-light">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-lg-7 col-md-12 px-4 mb-2">
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/81fd8b186093931.Y3JvcCw2MTM2LDQ4MDAsMTM2LDA.jpg"
+                  class="d-block w-100 rounded"
+                  alt="book img"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9c9187180309745.Y3JvcCwzNDA5LDI2NjcsMjk1LDA.jpg"
+                  class="d-block w-100 rounded"
+                  alt="book img"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d47f25180099849.Y3JvcCwzODM1LDMwMDAsODUsMA.jpg"
+                  class="d-block w-100 rounded"
+                  alt="book img"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-12 px-3">
+          <div class="card mb-4 border-0 shadow-sm p-2">
+            <div class="card-body">
+              <h6 class="mb-3">Delivery Details</h6>
+              <form id="booking_form" method="post" action="pay_now.php">
+                <input
+                  type="hidden"
+                  name="CSRF_TOKEN"
+                  value="64eebbffc639479a9a39de3aa6ea97b4"
+                />
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="form-label">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control shadow-none mb-3"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control shadow-none mb-3"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Phone number</label>
+                    <input
+                      type="number"
+                      name="phone"
+                      class="form-control shadow-none mb-3"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Whatsapp / Imo number</label>
+                    <input
+                      type="number"
+                      name="pincode"
+                      class="form-control shadow-none mb-3"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Address</label>
+                    <textarea
+                      name="address"
+                      rows="3"
+                      class="form-control shadow-none mb-3"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn w-100 custom-bg text-white shadow-none"
+                      name="pay_now"
+                    >
+                      Order complite
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-4 shadow p-3 rounded">
+          <h5>Description</h5>
+          <div>
+            <div class="mb-3">
+              <span
+                class="badge rounded-pill bg-light text-white text-wrap custom-bg"
+                >&#2547;&nbsp;250</span
+              >
+            </div>
+            <div class="mb-1">
+              <strong>লেখক : </strong>
+              <span>মাওলানা আব্দুল গাফফার শাহপুরী</span>
+            </div>
+            <div class="mb-1">
+              <strong>বিষয় : </strong>
+              <span>ইসলামি গবেষণা, সমালোচনা ও প্রবন্ধ</span>
+            </div>
+            <div class="mb-2">
+              <strong>পৃষ্ঠা : </strong> <span> 96, কভার : হার্ড কভার</span>
+            </div>
+            <div>
+              <p class="mb-3">
+                ফিলিস্তিনি মুসলিমদের ওপর দখলদার ইহুদিদের নির্বিচার
+                জুলুম-নির্যাতন এবং দখলদারদের বিরুদ্ধে ফিলিস্তিনি মুক্তিযোদ্ধাদের
+                এই প্রতিরোধযুদ্ধ নতুন কোনো ঘটনা নয়। এটা তো উসমানি খেলাফতের
+                পতন-পরবর্তী ফিলিস্তিনে ইহুদি অনুপ্রবেশের পরের প্রতিদিনের ঘটনা।
+                ফিলিস্তিনিরা তো জন্ম থেকেই নিপীড়নের শিকার। তাই তো তারা আজন্ম
+                প্রতিরোধযোদ্ধা।
+              </p>
+              <p class="mb-3">
+                এহেন পরিস্থিতিতে দিলের গভীর থেকে বারবার মনে হচ্ছিল সংক্ষিপ্ত তবে
+                সারগর্ভ আলোচনাসমৃদ্ধ এমন একটি বই লিপিবদ্ধ হওয়া উচিত, যাতে থাকবে
+                ফিলিস্তিনের সংক্ষিপ্ত ইতিহাস, ইহুদিদের ফিলিস্তিন দখল, তার
+                ঐতিহাসিক প্রেক্ষাপট, ফিলিস্তিনে খ্রিষ্টানদের স্বার্থ, চলমান
+                জুলুম-নিপীড়নে কুফরি বিশ্ব ও মুসলিমবিশ্বের ভূমিকা, ফিলিস্তিনি
+                মুসলিমদের ভয়ংকর ভবিষ্যৎ ও আমাদের করণীয় সম্পর্কে। এই সকল বিষয়
+                বিবেচনা করেই বক্ষ্যমাণ বইটি সাজানো হয়েছে।
+              </p>
+              <p class="mb-3">
+                সম্মানিত পাঠক! আসুন নিকট অতীত ও বর্তমানের তিনজন বিদগ্ধ মনীষীর
+                কলমে ফিলিস্তিন ও তার অধিবাসীদের জানি নতুন করে!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid bg-white mt-5">
+        <div class="row">
+          <div class="col-md-4 p-4">
+            <h3 class="h-fonts fw-bold fs-3 mb-2">Nibras Book Store</h3>
+            <p>
+              About Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis error voluptatem minus saepe asperiores ab, ducimus
+              tempore optio aut exercitationem? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Odit, voluptatibus
+            </p>
+          </div>
+          <div class="col-md-4 p-4">
+            <h3 class="h-fonts fw-bold fs-3 mb-3">Links</h3>
+            <a
+              href="index.html"
+              class="d-inline-block text-dark text-decoration-none mb-2"
+              >Home</a
+            ><br />
+            <a
+              href="contact.html"
+              class="d-inline-block text-dark text-decoration-none mb-2"
+              >Contact us</a
+            ><br />
+          </div>
+          <div class="col-md-4 p-4">
+            <h3 class="h-fonts fw-bold fs-3 mb-3">Fllow us</h3>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              class="d-inline-block text-dark text-decoration-none mb-2"
+            >
+              <i class="bi bi-twitter me-1"></i> Twitter
+            </a>
+            <br />
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="d-inline-block text-dark text-decoration-none mb-2"
+            >
+              <i class="bi bi-facebook me-1"></i> Facebook
+            </a>
+            <br />
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="d-inline-block text-dark text-decoration-none mb-2"
+            >
+              <i class="bi bi-instagram me-1"></i> Instagram
+            </a>
+            <br />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <h6 class="text-center h-fonts bg-dark text-white p-3 m-0">
+      www.abdulgaffar.com
+    </h6>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
