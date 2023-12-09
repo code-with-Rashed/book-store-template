@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="shortcut icon" href="../image/fav.png" type="image/x-icon" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar Area Start -->
+        <div class="col-2 bg-white shadow-sm vh-100">
+          <!-- Logo Area Start-->
+          <div class="py-3 text-center">
+            <img src="../image/logo.png" alt="logo" width="80px" />
+          </div>
+          <!-- Logo Area End -->
+          <!-- Sidebar Link Area Start -->
+          <div class="row">
+            <div class="col mt-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a
+                    href="dashboard.html"
+                    class="text-decoration-none fs-6 text-dark fw-bold text-capitalize d-block"
+                  >
+                    <i class="bi bi-diagram-3 fs-5 me-1"></i>
+                    Dashboard
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="orders.html"
+                    class="text-decoration-none fs-6 text-dark fw-bold text-capitalize d-block"
+                  >
+                    <i class="bi bi-cart fs-5 me-1"></i>
+                    Orders
+                  </a>
+                </li>
+                <li class="list-group-item list-group-item-primary">
+                  <a
+                    href="books.html"
+                    class="text-decoration-none fs-6 text-dark fw-bold text-capitalize d-block"
+                  >
+                    <i class="bi bi-book fs-5 me-1"></i>
+                    Books
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="message.html"
+                    class="text-decoration-none fs-6 text-dark fw-bold text-capitalize d-block"
+                  >
+                    <i class="bi bi-envelope-open fs-5 me-1"></i>
+                    Messages
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a
+                    href="setting.html"
+                    class="text-decoration-none fs-6 text-dark fw-bold text-capitalize d-block"
+                  >
+                    <i class="bi bi-gear fs-5 me-1"></i>
+                    Settings
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Sidebar Link Area End -->
+        </div>
+        <!-- Sidebar Area End -->
+        <!-- Content Area Start-->
+        <div class="col-10">
+          <!-- Nav Header Area Start-->
+          <div class="row p-4 bg-white ms-1 shadow-sm">
+            <div class="col-md-6">
+              <button
+                type="button"
+                class="btn btn-outline-dark btn-sm shadow-none"
+                title="collapse"
+              >
+                <i class="bi bi-list-ul fw-bold fs-5"></i>
+              </button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-outline-dark btn-sm shadow-none dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  data-bs-display="static"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../image/user.jpg"
+                    alt="profile-photo"
+                    width="30px"
+                    height="30px"
+                    class="rounded-circle"
+                  />
+                  <strong>Abdul gaffar</strong>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li>
+                    <a href="profile.html" class="dropdown-item">Profile</a>
+                  </li>
+                  <li><a href="" class="dropdown-item">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Nav Header Area End -->
+          <!-- Content Management Area Start -->
+          <div class="row ms-1">
+            <div class="col mt-5 bg-white shadow-sm p-4 rounded">
+              <h2 class="fw-bold mb-3">Books Management</h2>
+              <button
+                class="btn btn-primary fw-bold py-2 mb-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#addBooksModal"
+              >
+                <i class="bi bi-plus-square me-1"></i>
+                Add New Book
+              </button>
+              <table class="table table-bordered table-striped text-center">
+                <thead class="fs-5">
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>বিদূরিত হোক অসত্যের কালোমেঘ</td>
+                    <td class="fw-bold">&#2547;&nbsp;250</td>
+                    <td>12/22/2023</td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                        Publish
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-success btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#detailNewsModal"
+                      >
+                        <i class="bi bi-images"></i>
+                        Images
+                      </button>
+                      <button
+                        class="btn btn-primary btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editBooksModal"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                      </button>
+                      <button
+                        class="btn btn-danger btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal"
+                      >
+                        <i class="bi bi-trash"></i>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>ফিলিস্তিন সংকট</td>
+                    <td class="fw-bold">&#2547;&nbsp;350</td>
+                    <td>12/22/2023</td>
+                    <td>
+                      <button type="button" class="btn btn-warning btn-sm">
+                        <i class="bi bi-cloud-arrow-down"></i>
+                        Un-Publish
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-success btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#detailNewsModal"
+                      >
+                        <i class="bi bi-images"></i>
+                        Images
+                      </button>
+                      <button
+                        class="btn btn-primary btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editBooksModal"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                      </button>
+                      <button
+                        class="btn btn-danger btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal"
+                      >
+                        <i class="bi bi-trash"></i>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>আল-ওয়ালা ওয়াল বারা</td>
+                    <td class="fw-bold">&#2547;&nbsp;454</td>
+                    <td>12/22/2023</td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                        Publish
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-success btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#detailNewsModal"
+                      >
+                        <i class="bi bi-images"></i>
+                        Images
+                      </button>
+                      <button
+                        class="btn btn-primary btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editBooksModal"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                      </button>
+                      <button
+                        class="btn btn-danger btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal"
+                      >
+                        <i class="bi bi-trash"></i>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>হে যুবক! জান্নাত তোমার প্রতীক্ষায়</td>
+                    <td class="fw-bold">&#2547;&nbsp;854</td>
+                    <td>12/22/2023</td>
+                    <td>
+                      <button type="button" class="btn btn-warning btn-sm">
+                        <i class="bi bi-cloud-arrow-down"></i>
+                        Un-Publish
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-success btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#detailNewsModal"
+                      >
+                        <i class="bi bi-images"></i>
+                        Images
+                      </button>
+                      <button
+                        class="btn btn-primary btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editBooksModal"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                      </button>
+                      <button
+                        class="btn btn-danger btn-sm m-1"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal"
+                      >
+                        <i class="bi bi-trash"></i>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="pagination">
+                <li class="page-item">
+                  <a href="" class="page-link">Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a href="" class="page-link">1</a>
+                </li>
+                <li class="page-item"><a href="" class="page-link">2</a></li>
+                <li class="page-item"><a href="" class="page-link">3</a></li>
+                <li class="page-item"><a href="" class="page-link">4</a></li>
+                <li class="page-item"><a href="" class="page-link">Next</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Content Management Area End -->
+        </div>
+        <!-- Content Area End -->
+      </div>
+    </div>
+    <!-- Add Books Modal Start -->
+    <div
+      class="modal fade"
+      id="addBooksModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Add New Book
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label for="name" class="fw-bold mb-2">Name</label>
+                <input
+                  type="text"
+                  class="form-control border"
+                  id="name"
+                  required
+                  placeholder="Name...."
+                  maxlength="250"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="price" class="fw-bold mb-2">Price</label>
+                <input
+                  type="number"
+                  class="form-control border"
+                  id="price"
+                  required
+                  placeholder="Price...."
+                  maxlength="5"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="addBooksDescription" class="fw-bold mb-2"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="addBooksDescription"
+                  cols="30"
+                  rows="10"
+                  placeholder="Description...."
+                ></textarea>
+              </div>
+              <div class="form-group d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Books Modal End -->
+
+    <!-- Edit Books Modal Start -->
+    <div
+      class="modal fade"
+      id="editBooksModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Update Books
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label for="name" class="fw-bold mb-2">Name</label>
+                <input
+                  type="text"
+                  class="form-control border"
+                  id="name"
+                  required
+                  value="বিদূরিত হোক অসত্যের কালোমেঘ"
+                  maxlength="250"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="price" class="fw-bold mb-2">Price</label>
+                <input
+                  type="number"
+                  class="form-control border"
+                  id="price"
+                  required
+                  value="250"
+                  maxlength="5"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="editBooksDescription" class="fw-bold mb-2"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="editBooksDescription"
+                  cols="30"
+                  rows="6"
+                >
+                <p><strong>লেখক :</strong> মাওলানা আব্দুল গাফফার শাহপুরী</p>
+                <p><strong>বিষয় :</strong> ইসলামি গবেষণা, সমালোচনা ও প্রবন্ধফিলিস্তিনি</p>
+                <p>মুসলিমদের ওপর দখলদার ইহুদিদের নির্বিচারজুলুম-নির্যাতন এবং দখলদারদের বিরুদ্ধে ফিলিস্তিনি মুক্তিযোদ্ধাদেরএই প্রতিরোধযুদ্ধ নতুন কোনো ঘটনা নয়। এটা তো উসমানি খেলাফতেরপতন-পরবর্তী ফিলিস্তিনে ইহুদি অনুপ্রবেশের পরের প্রতিদিনের ঘটনা।ফিলিস্তিনিরা তো জন্ম থেকেই নিপীড়নের শিকার। তাই তো তারা আজন্মপ্রতিরোধযোদ্ধা।</p>
+                <p>এহেন পরিস্থিতিতে দিলের গভীর থেকে বারবার মনে হচ্ছিল সংক্ষিপ্ত তবে সারগর্ভ আলোচনাসমৃদ্ধ এমন একটি বই লিপিবদ্ধ হওয়া উচিত, যাতে থাকবে ফিলিস্তিনের সংক্ষিপ্ত ইতিহাস, ইহুদিদের ফিলিস্তিন দখল, তার ঐতিহাসিক প্রেক্ষাপট, ফিলিস্তিনে খ্রিষ্টানদের স্বার্থ, চলমান জুলুম-নিপীড়নে কুফরি বিশ্ব ও মুসলিমবিশ্বের ভূমিকা, ফিলিস্তিনি মুসলিমদের ভয়ংকর ভবিষ্যৎ ও আমাদের করণীয় সম্পর্কে। এই সকল বিষয় বিবেচনা করেই বক্ষ্যমাণ বইটি সাজানো হয়েছে।</p>
+                <p>সম্মানিত পাঠক! আসুন নিকট অতীত ও বর্তমানের তিনজন বিদগ্ধ মনীষীর কলমে ফিলিস্তিন ও তার অধিবাসীদের জানি নতুন করে!</p>
+              </textarea
+                >
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit News Modal End -->
+
+    <!-- Images News Modal Start -->
+    <div
+      class="modal fade"
+      id="detailNewsModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Add New Book Image
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group mb-3">
+                <label for="from" class="fw-bold mb-2">Book Image :</label>
+                <input
+                  type="file"
+                  class="form-control border"
+                  id="from"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+
+            <table class="table table-bordered my-4">
+              <thead class="fs-5">
+                <tr>
+                  <th>Images</th>
+                  <th>Thumbnail</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="https://wafilife-media.wafilife.com/uploads/2023/11/12.23.07_253d3eab-250x375.jpg"
+                      alt="img"
+                      width="100px"
+                    />
+                  </td>
+                  <td>
+                    <button class="btn btn-primary" title="Set Thumbnail">
+                      <i class="bi bi-check2-circle"></i>
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-danger btn-sm m-1"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deleteModal"
+                    >
+                      <i class="bi bi-trash"></i>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d47f25180099849.Y3JvcCwzODM1LDMwMDAsODUsMA.jpg"
+                      alt="img"
+                      width="100px"
+                    />
+                  </td>
+                  <td>
+                    <button class="btn btn-secondary" title="Set Thumbnail">
+                      <i class="bi bi-check2-circle"></i>
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-danger btn-sm m-1"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deleteModal"
+                    >
+                      <i class="bi bi-trash"></i>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/81fd8b186093931.Y3JvcCw2MTM2LDQ4MDAsMTM2LDA.jpg"
+                      alt="img"
+                      width="100px"
+                    />
+                  </td>
+                  <td>
+                    <button class="btn btn-secondary" title="Set Thumbnail">
+                      <i class="bi bi-check2-circle"></i>
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-danger btn-sm m-1"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deleteModal"
+                    >
+                      <i class="bi bi-trash"></i>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Images News Modal End -->
+
+    <!-- Delete Warning Modal Start-->
+    <div class="modal fade" id="deleteModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <strong>Are You Sure You Wan't to Delete ?</strong>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              No
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Images News Modal End -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      ClassicEditor.create(document.querySelector("#addBooksDescription"))
+        .then((editor) => {
+          // console.log(editor);
+        })
+        .catch((error) => {
+          // console.error(error);
+        });
+      ClassicEditor.create(document.querySelector("#editBooksDescription"))
+        .then((editor) => {
+          // console.log(editor);
+        })
+        .catch((error) => {
+          // console.error(error);
+        });
+    </script>
+  </body>
+</html>
